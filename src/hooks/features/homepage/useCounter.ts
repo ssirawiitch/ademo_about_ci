@@ -8,5 +8,20 @@ export default function useCounter() {
     setCount((count) => count + val);
   }
 
-  return { count, increment, val, setVal };
+  function decrement() {
+    setCount((count) => count - val);
+  }
+
+  function reset() {
+    setCount(0);
+  }
+
+  return {
+    count,
+    increment,
+    decrement,
+    reset,
+    val,
+    setVal,
+  };
 }
